@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.15)
 project(TestDeEs VERSION 1.0.0)
 
 # JUCE path 
-add_subdirectory("C:/Users/Stefanos/Desktop/JUCE" build_juce) 
+add_subdirectory("../JUCE" build_juce) 
 
 juce_add_plugin(TestDeEs
     # from 'pluginFormats="buildAU,buildVST3"'
@@ -18,17 +18,17 @@ juce_add_plugin(TestDeEs
     PRODUCT_NAME "TestDeEs" 
     PLUGIN_NAME "TestDeEs"
     
-
+    FORMATS AU VST3 Standalone
     PLUGIN_MANUFACTURER_CODE "Stef"
     PLUGIN_CODE "Ades"
 )
 
 target_sources(TestDeEs
     PRIVATE
-        Source/PluginProcessor.cpp
-        Source/PluginProcessor.h
-        Source/PluginEditor.cpp
-        Source/PluginEditor.h
+        PluginProcessor.cpp
+        PluginProcessor.h
+        PluginEditor.cpp
+        PluginEditor.h
 )
 
 target_compile_definitions(TestDeEs

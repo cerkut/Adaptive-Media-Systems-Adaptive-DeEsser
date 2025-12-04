@@ -27,8 +27,20 @@ You can then check if the standalone app works
 open Builds/MacOSX/build/Debug/TestDeEs.app
 ```
 
-## TODO cmake builds
+## cmake builds
 
+Requires cmake installed. In the root of the repo issue 
+
+``` shell
+cmake .
+cmake --build .
+```
+To clean the build, issue
+
+``` shell
+cmake --build . --target clean
+```
+### TODO make cmake and projucer use the same Build folder
 # Testing
 
 TODO add a simple vocal file or grab it.
